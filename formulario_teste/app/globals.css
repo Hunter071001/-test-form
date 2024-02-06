@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 90, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Adicionando um fundo nos campos de pergunta e resposta para constraste */
+.form-fields {
+  background-color: rgba(var(--background-start-rgb), 0.4);
+  padding: 300px;
+  border-radius: 80px;
+}
+
+.form-fields2 {
+  background-color: rgba(var(--background-start-rgb), 10.0);
+  padding: 20px;
+  border-radius: 80px;
+}
+
+.form-fields3 {
+  background-color: rgb(0, 0, 0);
+  padding: 50px;
+  border-radius: 10px;
+  width: 111%;
+  margin-top: -100px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
